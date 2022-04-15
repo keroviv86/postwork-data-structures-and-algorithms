@@ -1,5 +1,28 @@
 function selectionSort(arr) {
-  return arr.sort((a,b)=>a-b)
+  // return arr.sort((a,b)=>a-b)
+    // for(let i=0; i <arr.length-1; ++i){
+    //     let minIndex = i 
+    //     let temp
+    //     for (let j=i+1; j<arr.length; ++j){
+    //         if(arr[j]< arr[minIndex]){
+    //             minIndex= j
+    //         }
+    //     }
+        // [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]]
+    // }
+    // return arr
+
+    for(let i=0; i <arr.length-1; ++i){
+      let currValue = 0
+      for (let j=i+1; j < arr.length; ++j){
+          if(arr[j] < arr[i]){
+              currValue = arr[j]
+              arr[j] = arr[i]
+              arr[i] = currValue
+          }
+      }
+  }
+  return arr
 
 }
 
