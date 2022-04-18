@@ -1,5 +1,12 @@
 function rotateArray(arr, k) {
-  // type your code here
+  if(k>arr.length){
+    let newk = k % arr.length
+    return (arr.splice(-newk)).concat(arr)
+
+  }else{
+    return (arr.splice(-k)).concat(arr)
+  }
+  
 }
 
 if (require.main === module) {
