@@ -1,5 +1,18 @@
 function consecutiveSubstrings(string) {
-  // type your code here
+  let subStrings = []
+  console.log(string)
+   
+
+    for(let i=0; i<string.length; ++i){
+        subStrings.push(string[i])
+        let parentString = string[i]
+        
+        for(let j=i+1; j<string.length; ++j){
+            parentString += string[j]
+            subStrings.push(parentString)
+        }
+    }
+    return subStrings
 }
 
 if (require.main === module) {
