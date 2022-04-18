@@ -1,5 +1,19 @@
 function balancingParentheses(string) {
-  // type your code here
+  let opening = 0
+  let closing = 0
+  for(let i=0 ; i < string.length ; ++i){
+      if(string[i]=== '('){
+          opening++
+      }else if(string[i] === ')'){
+          if(opening>0){
+              opening--
+          }else{
+              closing++
+          }
+      }
+  }
+    return opening + closing
+
 }
 
 if (require.main === module) {
