@@ -1,5 +1,14 @@
 function distinctPairSum(arr, k) {
   // type your code here
+    let output =[]
+    let outputNum =[]
+    for(let i=0; i<arr.length; ++i){
+        if(outputNum.indexOf(arr[i]) ===-1 && arr[i]+arr[i+1]===k){
+            output.push([arr[i], arr[i+1]])
+            outputNum.push(arr[i], arr[i+1])
+        }
+    }
+    return output
 }
 
 if (require.main === module) {
