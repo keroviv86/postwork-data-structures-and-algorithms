@@ -1,5 +1,5 @@
 function findShortestStringRecursive(arr) {
-  // type your code here
+  let min = arr[0]
 }
 
 if (require.main === module) {
